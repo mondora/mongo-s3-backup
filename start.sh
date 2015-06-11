@@ -5,7 +5,7 @@
 : ${MONGO_PORT:?"env variable is required"}
 : ${S3_BUCKET:?"env variable is required"}
 : ${S3_FOLDER:?"env variable is required"}
-export AWS_DEFAULT_REGION=$(python get_bucket_region.py $S3_BUCKET)
+export AWS_DEFAULT_REGION=$(python /script/get_bucket_region.py $S3_BUCKET)
 export BACKUP_FILENAME_DATE_FORMAT=${BACKUP_FILENAME_DATE_FORMAT:-%Y%m%d}
 export BACKUP_FILENAME_PREFIX=${BACKUP_FILENAME_PREFIX:-mongo_backup}
 export CRON_SCHEDULE=${CRON_SCHEDULE:-0 1 * * *}
