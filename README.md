@@ -8,12 +8,11 @@ This container runs a cron job which:
 You can configure the execution of the above steps by setting the following
 environment variables:
 
-* **MONGO_HOST**
-* **MONGO_PORT**
-* **AWS_ACCESS_KEY_ID**
-* **AWS_SECRET_ACCESS_KEY**
-* **S3_BUCKET**
-* **S3_FOLDER**
-* **BACKUP_FILENAME_PREFIX** (optional)
-* **BACKUP_FILENAME_DATE_FORMAT** (optional)
-* **CRON_SCHEDULE** (optional)
+* `MONGO_HOST`
+* `MONGO_PORT`
+* `AWS_ACCESS_KEY_ID`
+* `AWS_SECRET_ACCESS_KEY`
+* `S3_BUCKET`
+* `BACKUP_FILENAME_PREFIX`, optional, defaults to `mongo_backup`
+* `BACKUP_FILENAME_DATE_FORMAT`, optional, defaults to `%Y%m%d`
+* `CRON_SCHEDULE`, optional, defaults to `0 1 * * *`
