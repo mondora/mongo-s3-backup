@@ -23,4 +23,5 @@ echo "CRON_ENVIRONMENT"
 echo "$CRON_ENVIRONMENT"
 
 echo "$CRON_ENVIRONMENT$CRON_SCHEDULE /script/backup.sh 1>>/var/log/backup_script.log 2>&1" | crontab -
-exec cron -f
+cron
+tail -f /var/log/backup_script.log
